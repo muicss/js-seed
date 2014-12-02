@@ -40,7 +40,7 @@ gulp.task('cssmin', ['sass'], function() {
 });
 
 gulp.task('js', ['clean'], function() {
-  return gulp.src('src/js/main.js')
+  return gulp.src('src/js/init.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(browserify())
