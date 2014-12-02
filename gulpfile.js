@@ -1,5 +1,5 @@
-var gulp = require('gulp'),
-    clean = require('gulp-clean'),
+var del = require('del'),
+    gulp = require('gulp'),
     sass = require('gulp-sass'),
     cssmin = require('gulp-cssmin'),
     jshint = require('gulp-jshint'),
@@ -20,9 +20,8 @@ else throw 'Did not understand task "' + taskName + '"';
 /*************************
  * recipes
  *************************/
-gulp.task('clean', function() {
-  return gulp.src(dirName, {read: false})
-    .pipe(clean({force: true}));
+gulp.task('clean', function(callback) {
+  del([dirName], callback);
 });
 
 gulp.task('sass', ['clean'], function() {
