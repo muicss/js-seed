@@ -13,7 +13,7 @@ This project contains a sample application with the following features:
  * Jest for unit testing
  * Node.js entrypoint
 
-Our goal is to help developers build JavaScript apps and packages from the ground up using current best practices. If you have any suggestions for how to improve the `js-seed` skeleton please create a GitHub issue.
+Our goal is to help developers build JavaScript apps and packages from the ground up using current best practices. If you have suggestions for how to improve `js-seed` please create a GitHub issue.
 
 ## Directory structure
 
