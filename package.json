@@ -3,7 +3,7 @@
   "name": "js-seed",
   "description": "JavaScript skeleton project",
   "version": "0.0.1",
-  "main": "./src/main.js",
+  "main": "./src/js/main.js",
   "dependencies": {
     "gulp": "3.8.10",
     "gulp-clean": "0.3.1",
