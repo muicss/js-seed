@@ -2,7 +2,7 @@
 
 js-seed is a skeleton project for JavaScript apps and packages. You can use it to quickly bootstrap your JavaScript projects.
 
-The skeleton contains a sample JavaScript application with the following features:
+The skeleton project contains a sample application with the following features:
 
  * npm for dependency management
  * gulp.js for builds
@@ -11,9 +11,11 @@ The skeleton contains a sample JavaScript application with the following feature
  * Browserify for frontend dependency management
  * uglify for JavaScript compression
  * Jest for unit testing
- * nodejs entrypoint for easy sharing
+ * nodejs entrypoint
 
-## Directory tree
+Our goal is to help developers build JavaScript apps from the ground up using current best practices. If you have any suggestions for how to improve the design of the skeleton please create a GitHub issue.
+
+## Directory structure
 
 <pre>
 js-seed/
@@ -31,7 +33,7 @@ js-seed/
 |-- main.js
 |-- package.json
 |-- README.md
-`-- src
+|-- src
     |-- js
     |   |-- init.js
     |   `-- lib.js
@@ -39,13 +41,15 @@ js-seed/
         |-- _mixins.scss
         |-- style.scss
         `-- _variables.scss
+`-- tests
+    `-- lib-test.js
 </pre>
 
 ## Dependencies
 
- * nodejs
- * npm
- * sass
+ * nodejs (http://nodejs.org/)
+ * npm (https://www.npmjs.org/)
+ * Sass (http://sass-lang.com/)
 
 ## Quickstart
 
@@ -72,15 +76,19 @@ js-seed/
   To view the example you can use any static file server. To use the nodejs `http-server` module:
   
   ```bash
-  $ npm install -g http-server
-  $ http-server
+  $ npm install http-server
+  $ ./node_modules/.bin/http-server
   ```
   
-  Then visit http://localhost:8081/examples/. If everything worked properly, when you click on the button an alert message will pop up.
+  Then visit http://localhost:8081/examples/.
+  
+  ![example](https://dl.dropboxusercontent.com/u/1644/js-seed/%E2%80%8Eoctodev_8081_examples_.png)
+  
+  If everything worked properly, when you click on the button an alert message will pop up.
 
 ## Creating production builds
 
-To create a production build of the example app, run `gulp dist`:
+To create a production build of the app, run `gulp dist`:
 
 ```bash
 $ ./node_modules/.bin/gulp dist
@@ -110,4 +118,17 @@ $ nodejs
 > var jsSeed = require('js-seed');
 > jsSeed.message();
 js-seeeeed!
+```
+
+## Unit tests
+
+The skeleton is configured to use Jest (https://facebook.github.io/jest/) for unit testing. To run the unit tests install jest-cli then run jest:
+
+```bash
+$ npm install jest-cli
+$ ./node_modules/.bin/jest
+Found 1 matching test...
+PASS  __tests__/lib-test.js (0.017s)
+1 test passed (1 total)
+Run time: 0.784s
 ```
