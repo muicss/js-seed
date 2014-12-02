@@ -34,13 +34,13 @@ js-seed/
 |-- package.json
 |-- README.md
 |-- src
-    |-- js
-    |   |-- init.js
-    |   `-- lib.js
-    `-- sass
-        |-- _mixins.scss
-        |-- style.scss
-        `-- _variables.scss
+|   |-- js
+|   |   |-- init.js
+|   |   `-- lib.js
+|   `-- sass
+|       |-- _mixins.scss
+|       |-- style.scss
+|       `-- _variables.scss
 `-- __tests__
     `-- lib-test.js
 </pre>
