@@ -4,4 +4,9 @@
  */
 var lib = require('./lib.js');
 
-lib.func();
+lib.attachEvent(window, 'load', function() {
+  lib.attachEvent(document.body, 'click', function(ev) {
+    if (ev.target.tagName === 'BUTTON') alert('js-seeeeed!');
+  });
+});
+
