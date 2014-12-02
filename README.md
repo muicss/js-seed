@@ -2,18 +2,18 @@
 
 js-seed is a skeleton project for JavaScript apps and packages. You can use it to quickly bootstrap your JavaScript projects.
 
-The skeleton project contains a sample application with the following features:
+This project contains a sample application with the following features:
 
  * npm for dependency management
- * gulp.js for builds
- * sass for css templating
+ * Gulp.js for builds
+ * Sass for css templating
  * CommonJS module syntax for code modularity
  * Browserify for frontend dependency management
- * uglify for JavaScript compression
+ * Uglify for JavaScript compression
  * Jest for unit testing
- * nodejs entrypoint
+ * Node.js entrypoint
 
-Our goal is to help developers build JavaScript apps from the ground up using current best practices. If you have any suggestions for how to improve the design of the skeleton please create a GitHub issue.
+Our goal is to help developers build JavaScript apps and packages from the ground up using current best practices. If you have any suggestions for how to improve the `js-seed` skeleton please create a GitHub issue.
 
 ## Directory structure
 
@@ -41,7 +41,7 @@ js-seed/
         |-- _mixins.scss
         |-- style.scss
         `-- _variables.scss
-`-- tests
+`-- __tests__
     `-- lib-test.js
 </pre>
 
@@ -108,7 +108,7 @@ dist/
 
 To deploy the app just copy the `dist` directory to a location of your choosing.
 
-## Use as nodejs module
+## Node.js entrypoint
 
 The skeleton is configured to export a nodejs module via the `main.js` file. The file can be modified to expose other functionality. Here's an example of how to download js-seed from GitHub and use it as a nodejs module:
 
