@@ -1,0 +1,7 @@
+@import "variables";
+@import "mixins";
+
+button {
+  color: $buttonColor;
+  @include gradient-radial();
+}
