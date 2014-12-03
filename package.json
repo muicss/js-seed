@@ -4,6 +4,7 @@
   "description": "JavaScript skeleton project",
   "version": "0.0.1",
   "main": "main.js",
+  "dependencies": {},
   "devDependencies": {
     "del": "1.0.0",
     "gulp": "3.8.10",
