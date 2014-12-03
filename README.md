@@ -77,7 +77,7 @@ js-seed/
   
   ```bash
   $ npm install http-server
-  $ ./node_modules/.bin/http-server
+  $ ./node_modules/.bin/http-server -p 8081
   ```
   
   Then visit http://localhost:8081/examples/.
