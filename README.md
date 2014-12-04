@@ -1,5 +1,9 @@
 # js-seed
 
+[![Build Status](https://travis-ci.org/amorey/js-seed.svg?branch=master)](https://travis-ci.org/amorey/js-seed)
+[![Dependency Status](https://david-dm.org/amorey/js-seed.svg)](https://david-dm.org/amorey/js-seed)
+[![devDependency Status](https://david-dm.org/amorey/js-seed/dev-status.svg)](https://david-dm.org/amorey/js-seed#info=devDependencies)
+
 js-seed is a skeleton project for JavaScript apps and packages. You can use it to quickly bootstrap your JavaScript projects.
 
 This project contains a sample application with the following features:
