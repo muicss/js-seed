@@ -17,5 +17,8 @@
   },
   "jest": {
     "testPathDirs": ["__tests__"]
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/jest"
   }
 }
