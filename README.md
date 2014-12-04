@@ -1,5 +1,7 @@
 # js-seed
 
+[![Build Status](https://travis-ci.org/amorey/js-seed.svg)](https://travis-ci.org/amorey/js-seed)
+
 js-seed is a skeleton project for JavaScript apps and packages. You can use it to quickly bootstrap your JavaScript projects.
 
 This project contains a sample application with the following features:
