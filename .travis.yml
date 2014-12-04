@@ -4,4 +4,4 @@ node_js:
 before_script:
   - npm install jest
 script:
-  - /home/travis/build/amorey/js-seed/node_modules/.bin/jest
+  - jest
