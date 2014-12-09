@@ -90,6 +90,14 @@ js-seed/
   
   If everything worked properly, when you click on the button an alert message will pop up.
 
+1. Watch for changes
+
+   ```bash
+   $ ./node_modules/.bin/gulp watch
+   ```
+
+  Re-build the examples anytime a sass file a js file changes.
+
 ## Creating production builds
 
 To create a production build of the app, run `gulp dist`:

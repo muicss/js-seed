@@ -12,9 +12,13 @@ var del = require('del'),
 var taskName = process.argv[process.argv.length - 1],
     dirName = null;
 
-if (taskName === 'dist') dirName = 'dist';
-else if (taskName === 'examples') dirName = 'examples/assets/' + pkg.name;
-else throw 'Did not understand task "' + taskName + '"';
+if (taskName === 'dist') {
+  dirName = 'dist';
+} else if (taskName === 'examples' || taskName === 'watch') {
+  dirName = 'examples/assets/' + pkg.name;
+} else {
+  throw 'Did not understand task "' + taskName + '"';
+}
 
 
 /*************************
@@ -24,7 +28,7 @@ gulp.task('clean', function(callback) {
   del([dirName], callback);
 });
 
-gulp.task('sass', ['clean'], function() {
+gulp.task('sass', function() {
   return gulp.src('src/sass/style.scss')
     .pipe(sass())
     .pipe(rename(pkg.name + '.css'))
@@ -38,7 +42,7 @@ gulp.task('cssmin', ['sass'], function() {
     .pipe(gulp.dest(dirName + '/css'));
 });
 
-gulp.task('js', ['clean'], function() {
+gulp.task('js', function() {
   return gulp.src('src/js/init.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
@@ -54,15 +58,27 @@ gulp.task('uglify', ['js'], function() {
     .pipe(gulp.dest(dirName + '/js'));  
 });
 
+function build() {
+  gulp.start('sass', 'cssmin', 'js', 'uglify');
+}
+
 /***********************
  * public tasks
  ***********************/
-var buildTasks = ['sass', 'cssmin', 'js', 'uglify'];
-
-gulp.task('dist', buildTasks, function() {
+gulp.task('dist', ['clean'], function() {
   // your 'dist' task goes here
+  build()
 });
 
-gulp.task('examples', buildTasks, function() {
+gulp.task('examples', ['clean'], function() {
   // your 'examples' task goes here
+  build()
+});
+
+gulp.task('watch', function() {
+  // watch .scss files
+  gulp.watch('src/sass/**/*.scss', ['sass', 'cssmin']);
+
+  // watch .js files
+  gulp.watch('src/js/**/*.js', ['js', 'uglify']);
 });
