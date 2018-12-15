@@ -1,7 +1,5 @@
 @import "variables";
-@import "mixins";
 
-button {
+.seed-button {
   color: $buttonColor;
-  @include gradient-radial();
 }

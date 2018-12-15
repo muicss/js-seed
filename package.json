@@ -4,21 +4,42 @@
   "description": "JavaScript skeleton project",
   "version": "0.0.1",
   "main": "main.js",
-  "dependencies": {},
-  "devDependencies": {
-    "del": "1.1.0",
-    "gulp": "3.8.10",
-    "gulp-sass": "1.2.4",
-    "gulp-cssmin": "0.1.6",
-    "gulp-jshint": "1.9.0",
-    "gulp-browserify": "0.5.0",
-    "gulp-uglify": "1.0.2",
-    "gulp-rename": "1.2.0"
-  },
-  "jest": {
-    "testPathDirs": ["__tests__"]
-  },
   "scripts": {
-    "test": "jest"
+    "build-all": "gulp build-all",
+    "build-dist": "gulp build-dist",
+    "build-examples": "gulp build-examples",
+    "build-e2e-tests": "gulp build-e2e-tests",
+    "gulp": "gulp",
+    "http-server": "http-server",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "6.0.1",
+    "babelify": "10.0.0",
+    "@babel/core": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "7.2.1",
+    "@babel/preset-env": "7.2.0",
+    "@babel/preset-react": "7.0.0",
+    "@babel/register": "7.0.0",
+    "babel-plugin-add-module-exports": "1.0.0",
+    "browserify": "16.2.3",
+    "del": "3.0.0",
+    "gulp": "4.0.0",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-babel": "8.0.0",
+    "gulp-sass": "4.0.2",
+    "gulp-cssmin": "0.2.0",
+    "gulp-jshint": "2.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "1.4.0",
+    "gulp-replace": "1.0.0",
+    "gulp-uglify": "3.0.0",
+    "jshint": "2.9.7",
+    "mocha": "5.2.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-test-renderer": "16.6.3",
+    "vinyl-buffer": "1.0.1",
+    "vinyl-source-stream": "2.0.0"
   }
 }
