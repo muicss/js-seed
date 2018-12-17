@@ -102,7 +102,7 @@ function buildReact(dirname) {
           babelify.configure({plugins: ['add-module-exports']})
         ]
       })
-      .pipe(plugins.replace(/require\(('react'|"react")\)/, "window.React"))
+      .pipe(plugins.replace(/require\(('react'|"react")\)/g, "window.React"))
       .pipe(plugins.rename('seed-react.js'))
       .pipe(gulp.dest(dirname))
       .pipe(plugins.uglify())
