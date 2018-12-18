@@ -1,52 +1,86 @@
 # js-seed
 
-[![Build Status](https://travis-ci.org/amorey/js-seed.svg?branch=master)](https://travis-ci.org/amorey/js-seed)
 [![Dependency Status](https://david-dm.org/amorey/js-seed.svg)](https://david-dm.org/amorey/js-seed)
 [![devDependency Status](https://david-dm.org/amorey/js-seed/dev-status.svg)](https://david-dm.org/amorey/js-seed#info=devDependencies)
 
-js-seed is a skeleton project for JavaScript apps and packages. You can use it to quickly bootstrap your JavaScript projects.
+js-seed is a seed project for JavaScript apps and packages. You can use it to quickly bootstrap your JavaScript projects.
 
 This project contains a sample application with the following features:
 
- * npm for dependency management
- * Gulp.js for builds
- * Sass for css templating
- * CommonJS module syntax for code modularity
+ * Gulp 4 for builds
+ * SASS for CSS templating
  * Browserify for frontend dependency management
  * Uglify for JavaScript compression
- * Jest for unit testing
- * Node.js entrypoint
+ * Mocha for unit testing
+ * E2E tests with Mocha browser
 
 Our goal is to help developers build JavaScript apps and packages from the ground up using current best practices. If you have suggestions for how to improve `js-seed` please create a GitHub issue or submit a pull request.
 
 ## Directory structure
 
 <pre>
-js-seed/
-|-- examples
-|   |-- assets
-|   |   `-- js-seed
-|   |       |-- css
-|   |       |   |-- js-seed.css
-|   |       |   `-- js-seed.min.css
-|   |       `-- js
-|   |           |-- js-seed.js
-|   |           `-- js-seed.min.js
-|   `-- index.html
-|-- gulpfile.js
-|-- main.js
-|-- package.json
-|-- README.md
-|-- src
-|   |-- js
-|   |   |-- init.js
-|   |   `-- lib.js
-|   `-- sass
-|       |-- _mixins.scss
-|       |-- style.scss
-|       `-- _variables.scss
-`-- __tests__
-    `-- lib-test.js
+js-seed
+├── README.md
+├── build-targets
+│   ├── e2e-tests.js
+│   ├── seed-react.js
+│   └── seed.js
+├── dist
+│   ├── css
+│   │   ├── seed.css
+│   │   └── seed.min.css
+│   ├── js
+│   │   ├── seed.js
+│   │   └── seed.min.js
+│   └── react
+│       ├── seed-react.js
+│       └── seed-react.min.js
+├── e2e-tests
+│   ├── index.html
+│   └── tests.js
+├── examples
+│   ├── assets
+│   │   ├── js-seed
+│   │   │   ├── css
+│   │   │   │   ├── seed.css
+│   │   │   │   └── seed.min.css
+│   │   │   ├── js
+│   │   │   │   ├── seed.js
+│   │   │   │   └── seed.min.js
+│   │   │   └── react
+│   │   │       ├── seed-react.js
+│   │   │       └── seed-react.min.js
+│   │   └── vendor
+│   │       ├── babel-standalone
+│   │       │   └── 7.2.0
+│   │       │       ├── babel.js
+│   │       │       └── babel.min.js
+│   │       └── react
+│   │           └── 16.6.3
+│   │               ├── react-dom.js
+│   │               └── react.js
+│   ├── js.html
+│   └── react.html
+├── gulpfile.js
+├── main.js
+├── package-lock.json
+├── package.json
+├── src
+│   ├── js
+│   │   └── button.js
+│   ├── react
+│   │   └── button.jsx
+│   └── sass
+│       ├── _variables.scss
+│       └── style.scss
+└── test
+    ├── js-tests
+    │   └── test-button.js
+    ├── lib
+    │   └── react-helpers.js
+    ├── mocha.opts
+    └── react-tests
+        └── test-button.js
 </pre>
 
 ## Dependencies
