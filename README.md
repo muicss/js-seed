@@ -3,16 +3,16 @@
 [![Dependency Status](https://david-dm.org/amorey/js-seed.svg)](https://david-dm.org/amorey/js-seed)
 [![devDependency Status](https://david-dm.org/amorey/js-seed/dev-status.svg)](https://david-dm.org/amorey/js-seed#info=devDependencies)
 
-js-seed is a seed project for JavaScript apps and packages. You can use it to quickly bootstrap your JavaScript projects.
+JS-Seed is a starter project for JavaScript apps and packages that you can use to bootstrap new JavaScript projects quickly.
 
 This project contains a sample application with the following features:
 
- * Gulp 4 for builds
  * SASS for CSS templating
- * Browserify for frontend dependency management
+ * JavaScript ES6 example module
+ * React example module
+ * Gulp 4 for builds
  * Uglify for JavaScript compression
- * Mocha for unit testing
- * E2E tests with Mocha browser
+ * Mocha for unit tests and E2E tests
 
 Our goal is to help developers build JavaScript apps and packages from the ground up using current best practices. If you have suggestions for how to improve `js-seed` please create a GitHub issue or submit a pull request.
 
